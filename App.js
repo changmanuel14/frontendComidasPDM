@@ -19,7 +19,7 @@ function App() {
   const [us, setUs] = useState("");
 
   function consumirApi(){
-    fetch('http://192.168.0.31:3001/categorias')
+    fetch('http://192.168.0.160:3001/categorias')
     .then( res => res.json())
     .then( datos => {
       //console.log(datos)
@@ -33,7 +33,7 @@ function App() {
   }
 
   function obtenerusers(){
-    fetch('http://192.168.0.31:3001/users')
+    fetch('http://192.168.0.160:3001/users')
     .then( res => res.json())
     .then( datos => {
       //console.log(datos)
@@ -46,7 +46,7 @@ function App() {
   }
 
   function obtenercomidas(id){
-    let cadena = 'http://192.168.0.31:3001/categorias/' + id
+    let cadena = 'http://192.168.0.160:3001/categorias/' + id
     console.log(cadena)
     fetch(cadena)
     .then( res => res.json())
@@ -61,7 +61,7 @@ function App() {
   }
 
   function agregarUser(user, pwd){
-    fetch('http://192.168.0.31:3001/user', {
+    fetch('http://192.168.0.160:3001/user', {
       method: "post",
       headers: {
         'Content-Type': 'application/json'
@@ -80,7 +80,7 @@ function App() {
   }
 
   function agregarCategoria(Nombre){
-    fetch('http://192.168.0.31:3001/categoria', {
+    fetch('http://192.168.0.160:3001/categoria', {
       method: "post",
       headers: {
         'Content-Type': 'application/json'
@@ -99,7 +99,7 @@ function App() {
   }
 
   function agregarComida(descripcion, id_categoria, id_usuario, fotografia){
-    fetch('http://192.168.0.31:3001/comida', {
+    fetch('http://192.168.0.160:3001/comida', {
       method: "post",
       headers: {
         'Content-Type': 'application/json'
@@ -118,7 +118,7 @@ function App() {
   }
 
   function obtenerusers(){
-    fetch('http://192.168.0.31:3001/users')
+    fetch('http://192.168.0.160:3001/users')
     .then( res => res.json())
     .then( datos => {
       //console.log(datos)
